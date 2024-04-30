@@ -37,7 +37,7 @@ const Login = () => {
         <div className="px-10 flex justify-center">
           <Form
             name="normal_login"
-            className="login-form w-3/4"
+            className="login-form w-3/4 space-y-10"
             initialValues={{
               remember: true,
             }}

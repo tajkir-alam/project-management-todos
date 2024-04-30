@@ -5,7 +5,9 @@ import {
   DeleteOutlined,
   FieldTimeOutlined,
 } from "@ant-design/icons";
+import { Tooltip } from 'antd';
 import Image from "next/image";
+import Link from "next/link";
 
 const ProjectCard = ({ card }) => {
   const { id, title, description, team_worker } = card;
@@ -23,9 +25,11 @@ const ProjectCard = ({ card }) => {
           {title}
         </p>
         <div className="space-x-3">
-          <button className="btn">
-            <EyeOutlined className="text-blue-800 text-lg" />
-          </button>
+          <Link href={`/dashboard/project/${id}`} className="btn">
+            <Tooltip title="View Project Details">
+              <EyeOutlined className="text-blue-800 text-lg" />
+            </Tooltip>
+          </Link>
           <button className="btn">
             <EditOutlined className="text-green-500 text-lg" />
           </button>
@@ -36,7 +40,13 @@ const ProjectCard = ({ card }) => {
       </div>
       <p className="mt-6">
         {description}
-        <span className="text-slate-500 cursor-pointer"> see more...</span>
+        <Link
+          href={`/dashboard/project/${id}`}
+          className="text-slate-500 cursor-pointer"
+        >
+          {" "}
+          see more...
+        </Link>
       </p>
       <div className="flex items-center justify-between mt-4">
         <div className="flex items-center gap-1 text-red-400">

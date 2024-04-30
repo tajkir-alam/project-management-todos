@@ -7,6 +7,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const page = () => {
   const [createTaskModal, setCreateTaskModal] = useState(false);
+
   const {
     data: projectData,
     isLoading,
@@ -18,7 +19,7 @@ const page = () => {
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
-      const jsonData = response.json();
+      const jsonData = response.json(); 
       return jsonData;
     },
   });

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Layout, Menu } from "antd";
 import {
   DesktopOutlined,
@@ -7,6 +7,7 @@ import {
   PieChartOutlined,
 } from "@ant-design/icons";
 import { useRouter } from "next/navigation";
+import "./dashboardSidebar.css";
 
 const DashboardSidebar = () => {
   const { Sider } = Layout;
@@ -30,13 +31,28 @@ const DashboardSidebar = () => {
 
   const handleMenuClick = (key) => {
     const selectedItem = items.find((item) => item.key === key);
-    console.log(typeof(key));
-    if (key === '1') {
+    if (key === "1") {
       router.push("/dashboard");
       return;
     } else if (selectedItem) {
       router.push(`/dashboard/${selectedItem.label.toLowerCase()}`);
     }
+  };
+
+  useEffect(() => {
+    // window.scrollTo(0, 0);
+    const handleResize = () => {
+      setCollapsed(window.innerWidth < 1024);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const handleSidebarCollapsed = () => {
+    setCollapsed(!collapsed);
   };
 
   return (
@@ -50,8 +66,7 @@ const DashboardSidebar = () => {
         mode="inline"
         className="min-h-screen pt-2"
         items={items}
-        onSelect={({ key }) => handleMenuClick(key)}
-        expandIcon={className="flex justify-center"}
+        onClick={({ key }) => handleMenuClick(key)}
       />
     </Sider>
   );

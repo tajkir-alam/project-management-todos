@@ -1,12 +1,17 @@
 import React from "react";
-import DashboardHeader from "../Component/AuthorizedComponent/DashboardHeader/DashboardHeader";
-import DashboardSidebar from "../Component/AuthorizedComponent/DashboardSidebar/DashboardSidebar";
 
 const page = () => {
   return (
-      <main className="flex max-w-[1536px] mx-auto">
-            hello modal
-      </main>
+    <main>
+      <section className="flex justify-between items-center">
+        <div>
+          <p className="font-sora text-lg">Projects</p>
+        </div>
+        <div>
+          <button className="btn">Create</button>
+        </div>
+      </section>
+    </main>
   );
 };
 

@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google";
-import "../globals.css";
 import DashboardHeader from "../Component/AuthorizedComponent/DashboardHeader/DashboardHeader";
 import DashboardSidebar from "../Component/AuthorizedComponent/DashboardSidebar/DashboardSidebar";
+// import '../globals.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,11 +15,11 @@ export default function Layout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <DashboardHeader />
-        <main className="flex max-w-[1536px] mx-auto">
+        <main className="">
           <div>
             <DashboardSidebar />
           </div>
-          <div className="grow">{children}</div>
+          <div className="grow p-4">{children}</div>
         </main>
       </body>
     </html>

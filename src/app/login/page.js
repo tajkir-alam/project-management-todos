@@ -23,6 +23,7 @@ const Login = () => {
 
   return (
     <main className="bg-[#F5F5F5]">
+      <div className="max-w-[1536px] mx-auto">
       <div className="grid grid-cols-2 justify-center items-center">
         <div className="hidden lg:block">
           <Image
@@ -97,6 +98,7 @@ const Login = () => {
             </Form.Item>
           </Form>
         </div>
+      </div>
       </div>
     </main>
   );

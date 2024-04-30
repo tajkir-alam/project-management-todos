@@ -28,7 +28,7 @@ const ProjectDetailPage = ({ params }) => {
         </div>
       </section>
       <section className="mt-10 grid lg:grid-cols-3 items-center justify-around gap-5">
-        <TaskColumn status='on going' />
+        <TaskColumn status='to do' />
         <TaskColumn status='in progress' />
         <TaskColumn status='completed' />
       </section>

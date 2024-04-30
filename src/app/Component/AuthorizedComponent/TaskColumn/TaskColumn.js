@@ -1,6 +1,7 @@
 import { Button } from "antd";
 import React from "react";
 import { PlusOutlined } from "@ant-design/icons";
+import Task from "../Tasks/Task";
 
 const TaskColumn = ({ status }) => {
   return (
@@ -17,7 +18,7 @@ const TaskColumn = ({ status }) => {
       </div>
       <div className="mt-5 p-2 h-screen bg-white">
         <div className="bg-[#F0F6FF] p-2 rounded-md">
-            sfsdf
+          <Task status={status} />
         </div>
       </div>
     </div>

@@ -9,7 +9,7 @@
             "/images/user2.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "to do",
         "deadLines": "12/08/24"
     },
     {
@@ -21,7 +21,7 @@
             "/images/user1.png",
             "/images/user2.png"
         ],
-        "status": "on going",
+        "status": "in progress",
         "deadLines": "12/08/24"
     },
     {
@@ -33,7 +33,7 @@
             "/images/user1.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "in progress",
         "deadLines": "12/08/24"
     },
     {
@@ -46,7 +46,7 @@
             "/images/user2.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "in progress",
         "deadLines": "12/08/24"
     },
     {
@@ -58,7 +58,7 @@
             "/images/user1.png",
             "/images/user2.png"
         ],
-        "status": "on going",
+        "status": "completed",
         "deadLines": "12/08/24"
     },
     {
@@ -70,7 +70,7 @@
             "/images/user1.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "to do",
         "deadLines": "12/08/24"
     },
     {
@@ -83,7 +83,7 @@
             "/images/user2.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "completed",
         "deadLines": "12/08/24"
     },
     {
@@ -95,7 +95,7 @@
             "/images/user1.png",
             "/images/user2.png"
         ],
-        "status": "on going",
+        "status": "completed",
         "deadLines": "12/08/24"
     },
     {
@@ -107,7 +107,7 @@
             "/images/user1.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "completed",
         "deadLines": "12/08/24"
     },
     {
@@ -120,7 +120,7 @@
             "/images/user2.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "completed",
         "deadLines": "12/08/24"
     },
     {
@@ -132,7 +132,7 @@
             "/images/user1.png",
             "/images/user2.png"
         ],
-        "status": "on going",
+        "status": "in progress",
         "deadLines": "12/08/24"
     },
     {
@@ -144,7 +144,7 @@
             "/images/user1.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "to do",
         "deadLines": "12/08/24"
     },
     {
@@ -156,7 +156,7 @@
             "/images/user1.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "to do",
         "deadLines": "12/08/24"
     },
     {
@@ -169,7 +169,7 @@
             "/images/user2.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "to do",
         "deadLines": "12/08/24"
     },
     {
@@ -181,7 +181,7 @@
             "/images/user1.png",
             "/images/user2.png"
         ],
-        "status": "on going",
+        "status": "to do",
         "deadLines": "12/08/24"
     },
     {
@@ -193,7 +193,7 @@
             "/images/user1.png",
             "/images/user3.png"
         ],
-        "status": "on going",
+        "status": "to do",
         "deadLines": "12/08/24"
     }
 ]

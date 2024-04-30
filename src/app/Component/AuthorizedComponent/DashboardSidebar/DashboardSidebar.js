@@ -7,7 +7,6 @@ import {
   PieChartOutlined,
 } from "@ant-design/icons";
 import { useRouter } from "next/navigation";
-import "./dashboardSidebar.css";
 
 const DashboardSidebar = () => {
   const { Sider } = Layout;
@@ -60,6 +59,7 @@ const DashboardSidebar = () => {
       collapsible
       collapsed={collapsed}
       onCollapse={(value) => setCollapsed(value)}
+      trigger={null}
     >
       <Menu
         defaultSelectedKeys={["1"]}

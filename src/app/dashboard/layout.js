@@ -15,12 +15,10 @@ export default function Layout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <DashboardHeader />
-        <main className="">
-          <div>
-            <DashboardSidebar />
-          </div>
-          <div className="grow p-4">{children}</div>
-        </main>
+        <div className="flex">
+          <DashboardSidebar />
+          <main className="grow bg-[#F0F6FF] p-5">{children}</main>
+        </div>
       </body>
     </html>
   );

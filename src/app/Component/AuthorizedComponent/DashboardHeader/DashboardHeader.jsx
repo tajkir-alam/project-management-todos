@@ -70,7 +70,7 @@ const DashboardHeader = () => {
                         </div>
                     </button>
                 </div>
-                <div onClick={(e) => e.stopPropagation()} className={`absolute w-[300px] ${showProfile ? 'right-5 lg:right-10' : '-right-96'} top-[calc(100%+3px)] flex items-center justify-between bg-white p-3 shadow-[-2px_2px_10px_1px_rgba(0,0,0,0.1)] duration-300`}>
+                <div onClick={(e) => e.stopPropagation()} className={`z-50 absolute w-[300px] ${showProfile ? 'right-5 lg:right-10' : '-right-96'} top-[calc(100%+3px)] flex items-center justify-between bg-white p-3 shadow-[-2px_2px_10px_1px_rgba(0,0,0,0.1)] duration-300`}>
                     <button className='btn font-sora text-sm text-[#6B6B6B] px-5 py-3 border border-[#C4C4C4]'>Profile</button>
                     <button onClick={() => router.push('/')} className='btn font-sora text-sm text-[#6B6B6B] px-5 py-3 border border-[#C4C4C4]'>Logout</button>
                 </div>

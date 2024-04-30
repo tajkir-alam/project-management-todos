@@ -1,0 +1,139 @@
+[
+    {
+    "id": 1,
+        "title": "POS Software",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    },
+    {
+    "id": 2,
+        "title": "ERM Software",
+        "description": "Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png"
+        ]
+    },
+    {
+    "id": 3,
+        "title": "HRM Software",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user2.png",
+            "/images/user3.png",
+            "/images/user1.png"
+        ]
+    },
+    {
+    "id": 4,
+        "title": "E-Commerce",
+        "description": "Puas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png"
+        ]
+    },
+    {
+    "id": 5,
+        "title": "Educational Website",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    },
+    {
+    "id": 6,
+        "title": "App Development",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    },
+    {
+    "id": 7,
+        "title": "Board Meeting",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    },
+    {
+    "id": 8,
+        "title": "Game Changer",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    },
+    {
+    "id": 9,
+        "title": "Students Club",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    },
+    {
+    "id": 10,
+        "title": "Management System",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    },
+    {
+    "id": 11,
+        "title": "Govt Project",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    },
+    {
+    "id": 12,
+        "title": "Insurance Company",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    },
+    {
+    "id": 13,
+        "title": "Bank Software",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    },
+    {
+    "id": 14,
+        "title": "Programming Contest",
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, aut voluptas, ut velit quas iusto, dicta nam praesentium quaerat nihil nisi quos aspernatur. A blanditiis velit",
+        "team_worker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ]
+    }
+]

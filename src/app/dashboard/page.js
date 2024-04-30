@@ -1,9 +1,31 @@
-import { Button } from "antd";
+"use client";
+import { Button, Spin } from "antd";
 import React from "react";
 import ProjectCard from "../Component/AuthorizedComponent/ProjectCard/ProjectCard";
+import { useQuery } from "@tanstack/react-query";
 
 const page = () => {
-  const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const { data: projectData, isLoading, isError } = useQuery({
+    queryKey: ["projects"],
+    queryFn: async () => {
+      const response = await fetch("/mockAPI/projectData.json");
+      if (!response.ok) {
+        throw new Error("Failed to fetch data");
+      }
+      const jsonData = await response.json();
+      return jsonData;
+    },
+  });
+
+  if (isLoading) {
+    return <Spin size="large" />;
+  }
+
+  if (isError) {
+    return <div>Error fetching data</div>;
+  }
+
   return (
     <main className="space-y-5">
       <section className="flex justify-between items-center">
@@ -23,8 +45,8 @@ const page = () => {
         </div>
       </section>
       <section className="grid lg:grid-cols-3 gap-5">
-        {array.map((card, index) => (
-          <ProjectCard key={index} />
+        {projectData.map((card, index) => (
+          <ProjectCard key={index} card={card} />
         ))}
       </section>
     </main>

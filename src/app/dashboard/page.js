@@ -1,19 +1,24 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 "use client";
 import { Button, Spin } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import ProjectCard from "../Component/AuthorizedComponent/ProjectCard/ProjectCard";
 import { useQuery } from "@tanstack/react-query";
 
 const page = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { data: projectData, isLoading, isError } = useQuery({
+  const [createTaskModal, setCreateTaskModal] = useState(false);
+  const {
+    data: projectData,
+    isLoading,
+    isError,
+  } = useQuery({
     queryKey: ["projects"],
     queryFn: async () => {
       const response = await fetch("/mockAPI/projectData.json");
       if (!response.ok) {
         throw new Error("Failed to fetch data");
       }
-      const jsonData = await response.json();
+      const jsonData = response.json();
       return jsonData;
     },
   });

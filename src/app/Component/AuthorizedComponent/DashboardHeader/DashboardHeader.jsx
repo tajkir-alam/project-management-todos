@@ -3,13 +3,13 @@ import { useRouter } from 'next/navigation';
 import React, { useEffect, useRef, useState } from 'react';
 import { SearchOutlined, QuestionCircleOutlined, SettingOutlined, BellOutlined } from '@ant-design/icons'
 import Image from 'next/image';
-import { Typography, Input } from 'antd';
+import { Typography, Input, Button } from 'antd';
 
 const DashboardHeader = () => {
     const [showProfile, setShowProfile] = useState(false);
     const profileRef = useRef(null);
     const router = useRouter();
-    const { Title } = Typography;
+    const { Title, Paragraph } = Typography;
 
     useEffect(() => {
         const handleClickOutside = (e) => {
@@ -26,7 +26,7 @@ const DashboardHeader = () => {
     return (
         <header className='relative overflow-x-clip bg-white border-b-[1px] border-[#E9E9E9] px-10 py-2 flex items-center justify-between'>
             <div>
-                <Title level={2} className='tracking-widest !mb-0'>Task Ger</Title>
+                <Title level={2} className='tracking-widest !mb-0 font-sora'>Task Gear</Title>
             </div>
 
             <div className='flex items-center gap-5'>
@@ -38,21 +38,23 @@ const DashboardHeader = () => {
                 />
                 <div className='flex items-center gap-5'>
                     <div className='flex items-center gap-5 '>
-                        <button className='btn bg-[#E6E6E6] p-2 rounded-md'>
-                            <span className='text-xl text-[#6B6B6B] p-1'>
-                                <QuestionCircleOutlined />
-                            </span>
-                        </button>
-                        <button className='btn bg-[#E6E6E6] p-2 rounded-md'>
-                            <span className='text-xl text-[#6B6B6B] p-1'>
-                                <SettingOutlined />
-                            </span>
-                        </button>
-                        <button className='btn bg-[#E6E6E6] p-2 rounded-md'>
-                            <span className='text-xl text-[#6B6B6B] p-1'>
-                                <BellOutlined />
-                            </span>
-                        </button>
+                        <Button
+                            icon={<QuestionCircleOutlined />}
+                            size='large'
+                            className='btn bg-[#E6E6E6] p-2 rounded-md'>
+                        </Button>
+                        <Button
+                            icon={<SettingOutlined />}
+                            size='large'
+                            className='btn bg-[#E6E6E6] p-2 rounded-md'
+                        >
+                        </Button>
+                        <Button
+                            icon={<BellOutlined />}
+                            size='large'
+                            className='btn bg-[#E6E6E6] p-2 rounded-md'
+                        >
+                        </Button>
                     </div>
                     <button
                         ref={profileRef}
@@ -63,8 +65,8 @@ const DashboardHeader = () => {
                             <Image src="/images/user.jpg" alt="" width={50} height={50} />
                         </div>
                         <div className='text-justify'>
-                            <h1 className='font-sora font-semibold text-lg'>Jack Bakley Rion</h1>
-                            <h6 className='font-sora text-[#6B6B6B] text-sm tracking-widest'>Project Manager</h6>
+                            <Title level={5} className='!mb-0 font-sora font-semibold text-lg'>Jack Bakley Rion</Title>
+                            <Paragraph className='!mb-0 font-sora text-[#6B6B6B] text-sm tracking-widest'>Project Manager</Paragraph>
                         </div>
                     </button>
                 </div>

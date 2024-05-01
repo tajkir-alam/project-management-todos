@@ -4,7 +4,7 @@ import { PlusOutlined } from "@ant-design/icons";
 import Task from "../Tasks/Task";
 import taskStore from "@/app/zustand/store";
 
-const TaskColumn = ({ status }) => {
+const TaskColumn = ({ status, searchQuery }) => {
   const [drop, setDrop] = useState(false);
   const setDraggedTask = taskStore((store) => store.setDraggedTask);
   const draggedTask = taskStore((store) => store.draggedTask);
@@ -50,7 +50,7 @@ const TaskColumn = ({ status }) => {
         />
       </div>
       <div className="mt-5 p-2 bg-white h-full">
-        <Task status={status} />
+        <Task status={status} searchQuery={searchQuery} />
       </div>
     </div>
   );

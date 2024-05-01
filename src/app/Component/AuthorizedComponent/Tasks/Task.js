@@ -8,15 +8,24 @@ import {
 import Image from "next/image";
 import { Tooltip } from "antd";
 
-const Task = ({ status }) => {
+const Task = ({ status, searchQuery }) => {
   const fetchTask = taskStore((state) => state.fetchTask);
   const tasks = taskStore((state) => state.tasks);
-  const filterTasks = tasks.filter((task) => task.status == status);
   const setDraggedTask = taskStore((store) => store.setDraggedTask);
+
+  const filterTasks = tasks.filter((task) => {
+    const statusMatch = task.status === status;
+    const titleMatch =
+      !searchQuery ||
+      task.taskTitle.toLowerCase().includes(searchQuery.toLowerCase());
+    return statusMatch && titleMatch;
+  });
 
   useEffect(() => {
     fetchTask();
   }, [fetchTask]);
+
+  console.log(searchQuery);
 
   return filterTasks.map((task, index) => (
     <div

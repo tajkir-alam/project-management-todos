@@ -11,13 +11,11 @@ import { Tooltip } from "antd";
 const Task = ({ status }) => {
   const fetchTask = taskStore((state) => state.fetchTask);
   const tasks = taskStore((state) => state.tasks);
+  const filterTasks = tasks.filter((task) => task.status == status);
+
   useEffect(() => {
     fetchTask();
   }, [fetchTask]);
-
-  const filterTasks = tasks.filter((task) => task.status == status);
-
-  console.log(filterTasks);
 
   return filterTasks.map((task, index) => (
     <div

@@ -14,6 +14,10 @@ const taskStore = create((set, get) => ({
       console.error("Error fetching task data:", error);
     }
   },
+  addTask: (newTask) =>
+    set((state) => ({
+      tasks: [newTask, ...state.tasks],
+    })),
 }));
 
 export default taskStore;

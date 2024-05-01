@@ -12,6 +12,7 @@ const Task = ({ status }) => {
   const fetchTask = taskStore((state) => state.fetchTask);
   const tasks = taskStore((state) => state.tasks);
   const filterTasks = tasks.filter((task) => task.status == status);
+  const setDraggedTask = taskStore((store) => store.setDraggedTask);
 
   useEffect(() => {
     fetchTask();
@@ -22,6 +23,9 @@ const Task = ({ status }) => {
       key={index}
       className="bg-[#F0F6FF] p-3 rounded-md mt-2 mb-4 cursor-move"
       draggable
+      onDragStart={() => {
+        setDraggedTask(task.id);
+      }}
     >
       <div className="flex justify-between items-center">
         <h6 className="text-lg font-sora tracking-wider text-[#383636]">

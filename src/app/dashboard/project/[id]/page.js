@@ -1,13 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Input } from "antd";
 import TaskColumn from "@/app/Component/AuthorizedComponent/TaskColumn/TaskColumn";
 
 const ProjectDetailPage = ({ params }) => {
   const { Search } = Input;
-  // const findProjectTask =
+  const [searchQuery, setSearchQuery] = useState("");
   const onSearch = (value) => {
-    console.log(value);
+    setSearchQuery(value.trim().toLowerCase());
   };
 
   return (
@@ -28,9 +28,9 @@ const ProjectDetailPage = ({ params }) => {
         </div>
       </section>
       <section className="mt-10 grid lg:grid-cols-3 justify-around gap-5">
-        <TaskColumn status='to do' />
-        <TaskColumn status='in progress' />
-        <TaskColumn status='completed' />
+        <TaskColumn status="to do" />
+        <TaskColumn status="in progress" />
+        <TaskColumn status="completed" />
       </section>
     </main>
   );

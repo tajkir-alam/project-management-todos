@@ -1,11 +1,14 @@
 import { Button } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import { PlusOutlined } from "@ant-design/icons";
 import Task from "../Tasks/Task";
 import taskStore from "@/app/zustand/store";
 
 const TaskColumn = ({ status }) => {
-
+  const [drop, setDrop] = useState(false);
+  const setDraggedTask = taskStore((store) => store.setDraggedTask);
+  const draggedTask = taskStore((store) => store.draggedTask);
+  const moveTask = taskStore((store) => store.moveTask);
   const handleAddTask = (statusIs) => {
     const newTask = {
       id: 49,
@@ -20,7 +23,21 @@ const TaskColumn = ({ status }) => {
   };
 
   return (
-    <div className="shadow pb-10 overflow-hidden rounded-lg">
+    <div
+      onDragOver={(e) => {
+        setDrop(true);
+        e.preventDefault();
+      }}
+      onDragLeave={(e) => {
+        setDrop(false);
+        e.preventDefault();
+      }}
+      onDrop={(e) => {
+        setDrop(false);
+        moveTask(draggedTask, status);
+      }}
+      className="shadow pb-10 overflow-hidden rounded-lg"
+    >
       <h6 className="bg-white font-sora capitalize text-lg text-[#1c4f55] text-center py-2 tracking-wider">
         {status}
       </h6>

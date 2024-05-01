@@ -7,6 +7,9 @@
         "taskWorker": [
             "/images/user1.png",
             "/images/user2.png",
+            "/images/user3.png",
+            "/images/user1.png",
+            "/images/user2.png",
             "/images/user3.png"
         ],
         "status": "to do",
@@ -31,6 +34,9 @@
         "taskDescription": "create contact page in react and use tailwind",
         "taskWorker": [
             "/images/user1.png",
+            "/images/user3.png",
+            "/images/user1.png",
+            "/images/user2.png",
             "/images/user3.png"
         ],
         "status": "in progress",
@@ -56,7 +62,11 @@
         "taskDescription": "create footer in react and use tailwind",
         "taskWorker": [
             "/images/user1.png",
-            "/images/user2.png"
+            "/images/user2.png",
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user2.png",
+            "/images/user3.png"
         ],
         "status": "completed",
         "deadLines": "12/08/24"
@@ -118,6 +128,8 @@
         "taskWorker": [
             "/images/user1.png",
             "/images/user2.png",
+            "/images/user3.png",
+            "/images/user2.png",
             "/images/user3.png"
         ],
         "status": "completed",
@@ -142,7 +154,9 @@
         "taskDescription": "create navbar in react and use tailwind",
         "taskWorker": [
             "/images/user1.png",
-            "/images/user3.png"
+            "/images/user3.png",
+            "/images/user1.png",
+            "/images/user2.png"
         ],
         "status": "to do",
         "deadLines": "12/08/24"
@@ -165,6 +179,9 @@
         "taskTitle": "Create Form Page",
         "taskDescription": "create form page in react and use tailwind",
         "taskWorker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png",
             "/images/user1.png",
             "/images/user2.png",
             "/images/user3.png"
@@ -191,6 +208,9 @@
         "taskDescription": "create navbar in react and use tailwind",
         "taskWorker": [
             "/images/user1.png",
+            "/images/user3.png",
+            "/images/user1.png",
+            "/images/user2.png",
             "/images/user3.png"
         ],
         "status": "to do",

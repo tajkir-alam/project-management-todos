@@ -25,8 +25,6 @@ const Task = ({ status, searchQuery }) => {
     fetchTask();
   }, [fetchTask]);
 
-  console.log(searchQuery);
-
   return filterTasks.map((task, index) => (
     <div
       key={index}

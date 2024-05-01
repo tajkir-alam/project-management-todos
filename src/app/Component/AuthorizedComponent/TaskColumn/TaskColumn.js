@@ -1,25 +1,41 @@
-import { Button } from "antd";
+import { Button, Form, Modal, Input, DatePicker, Select } from "antd";
 import React, { useState } from "react";
 import { PlusOutlined } from "@ant-design/icons";
 import Task from "../Tasks/Task";
 import taskStore from "@/app/zustand/store";
+import moment from "moment";
 
-const TaskColumn = ({ status, searchQuery }) => {
+const TaskColumn = ({ projectID, status, searchQuery }) => {
+  const date = Date.now();
+  const { Option } = Select;
+  const [form] = Form.useForm();
+  const [selectedWorkers, setSelectedWorkers] = useState([]);
   const [drop, setDrop] = useState(false);
-  const setDraggedTask = taskStore((store) => store.setDraggedTask);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const draggedTask = taskStore((store) => store.draggedTask);
   const moveTask = taskStore((store) => store.moveTask);
-  const handleAddTask = (statusIs) => {
-    const newTask = {
-      id: 49,
-      projectID: 3,
-      taskTitle: `Created Task ${statusIs}`,
-      taskDescription: "create Task ..............",
-      taskWorker: ["/images/user1.png"],
-      status: statusIs,
-      deadLines: "12/08/24",
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleWorkerChange = (selectedOptions) => {
+    setSelectedWorkers(selectedOptions);
+  };
+  const onFinish = (values) => {
+    setIsModalOpen(false);
+    const imagePaths = selectedWorkers.map((user) => `/images/${user}.png`);
+    const formattedDeadline = moment(values.deadlines).format("DD/MM/YY");
+    const formData = {
+      ...values,
+      id: date,
+      projectID: parseInt(projectID),
+      deadLines: formattedDeadline,
+      taskWorker: imagePaths,
+      status
     };
-    taskStore.getState().addTask(newTask);
+    taskStore.getState().addTask(formData);
+    console.log(formData);
   };
 
   return (
@@ -46,8 +62,63 @@ const TaskColumn = ({ status, searchQuery }) => {
           block
           icon={<PlusOutlined />}
           className="btn bg-transparent border border-dashed border-[#067C89] text-2xl !hover:bg-transparent !focus:bg-transparent"
-          onClick={() => handleAddTask(status)}
+          onClick={() => setIsModalOpen(!isModalOpen)}
         />
+        <Modal
+          title="Add Task"
+          open={isModalOpen}
+          footer={[
+            <Button key="addTask" type="primary" onClick={() => form.submit()}>
+              Add Task
+            </Button>,
+            <Button key="cancel" onClick={handleCancel}>
+              Cancel
+            </Button>,
+          ]}
+        >
+          <Form form={form} layout="vertical" onFinish={onFinish}>
+            <Form.Item
+              name="taskTitle"
+              label="Task Title"
+              rules={[{ required: true, message: "Please enter task title" }]}
+            >
+              <Input />
+            </Form.Item>
+            <Form.Item
+              name="taskDescription"
+              label="Task Description"
+              rules={[
+                { required: true, message: "Please enter task description" },
+              ]}
+            >
+              <Input.TextArea />
+            </Form.Item>
+            <Form.Item
+              name="taskWorker"
+              label="Task Worker"
+              rules={[
+                { required: true, message: "Please select task workers" },
+              ]}
+            >
+              <Select
+                mode="multiple"
+                placeholder="Select task workers"
+                onChange={handleWorkerChange}
+              >
+                <Option value="user1">User 1</Option>
+                <Option value="user2">User 2</Option>
+                <Option value="user3">User 3</Option>
+              </Select>
+            </Form.Item>
+            <Form.Item
+              name="deadlines"
+              label="Deadline"
+              rules={[{ required: true, message: "Please select deadline" }]}
+            >
+              <DatePicker format="DD/MM/YY" />
+            </Form.Item>
+          </Form>
+        </Modal>
       </div>
       <div className="mt-5 p-2 bg-white h-full">
         <Task status={status} searchQuery={searchQuery} />

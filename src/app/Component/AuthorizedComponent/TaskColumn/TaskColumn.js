@@ -121,7 +121,7 @@ const TaskColumn = ({ projectID, status, searchQuery }) => {
         </Modal>
       </div>
       <div className="mt-5 p-2 bg-white h-full">
-        <Task status={status} searchQuery={searchQuery} />
+        <Task projectID={projectID} status={status} searchQuery={searchQuery} />
       </div>
     </div>
   );

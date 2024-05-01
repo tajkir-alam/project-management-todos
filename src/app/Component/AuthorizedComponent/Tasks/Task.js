@@ -8,12 +8,13 @@ import {
 import Image from "next/image";
 import { Tooltip } from "antd";
 
-const Task = ({ status, searchQuery }) => {
+const Task = ({ projectID, status, searchQuery }) => {
   const fetchTask = taskStore((state) => state.fetchTask);
   const tasks = taskStore((state) => state.tasks);
   const setDraggedTask = taskStore((store) => store.setDraggedTask);
 
-  const filterTasks = tasks.filter((task) => {
+  const filterProjectID = tasks.filter((task) => task.projectID == projectID);
+  const filterTasks = filterProjectID.filter((task) => {
     const statusMatch = task.status === status;
     const titleMatch =
       !searchQuery ||

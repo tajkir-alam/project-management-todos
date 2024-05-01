@@ -1,21 +1,5 @@
 [
     {
-        "id": 1,
-        "projectID": 1,
-        "taskTitle": "Create Home Page",
-        "taskDescription": "create home page in react and use tailwind",
-        "taskWorker": [
-            "/images/user1.png",
-            "/images/user2.png",
-            "/images/user3.png",
-            "/images/user1.png",
-            "/images/user2.png",
-            "/images/user3.png"
-        ],
-        "status": "to do",
-        "deadLines": "12/08/24"
-    },
-    {
         "id": 2,
         "projectID": 1,
         "taskTitle": "Create About Page",
@@ -24,7 +8,7 @@
             "/images/user1.png",
             "/images/user2.png"
         ],
-        "status": "in progress",
+        "status": "completed",
         "deadLines": "12/08/24"
     },
     {
@@ -35,19 +19,6 @@
         "taskWorker": [
             "/images/user1.png",
             "/images/user3.png",
-            "/images/user1.png",
-            "/images/user2.png",
-            "/images/user3.png"
-        ],
-        "status": "in progress",
-        "deadLines": "12/08/24"
-    },
-    {
-        "id": 4,
-        "projectID": 2,
-        "taskTitle": "Create Form Page",
-        "taskDescription": "create form page in react and use tailwind",
-        "taskWorker": [
             "/images/user1.png",
             "/images/user2.png",
             "/images/user3.png"
@@ -69,18 +40,6 @@
             "/images/user3.png"
         ],
         "status": "completed",
-        "deadLines": "12/08/24"
-    },
-    {
-        "id": 6,
-        "projectID": 3,
-        "taskTitle": "Create Navbar",
-        "taskDescription": "create navbar in react and use tailwind",
-        "taskWorker": [
-            "/images/user1.png",
-            "/images/user3.png"
-        ],
-        "status": "to do",
         "deadLines": "12/08/24"
     },
     {
@@ -148,20 +107,6 @@
         "deadLines": "12/08/24"
     },
     {
-        "id": 12,
-        "projectID": 5,
-        "taskTitle": "Create Navbar",
-        "taskDescription": "create navbar in react and use tailwind",
-        "taskWorker": [
-            "/images/user1.png",
-            "/images/user3.png",
-            "/images/user1.png",
-            "/images/user2.png"
-        ],
-        "status": "to do",
-        "deadLines": "12/08/24"
-    },
-    {
         "id": 13,
         "projectID": 5,
         "taskTitle": "Create Navbar",
@@ -214,6 +159,123 @@
             "/images/user3.png"
         ],
         "status": "to do",
+        "deadLines": "12/08/24"
+    },
+    {
+        "id": 1,
+        "projectID": 1,
+        "taskTitle": "Create Home Page",
+        "taskDescription": "create home page in react and use tailwind",
+        "taskWorker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png",
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ],
+        "status": "to do",
+        "deadLines": "12/08/24"
+    },
+    {
+        "id": 19,
+        "projectID": 4,
+        "taskTitle": "Create Form Page",
+        "taskDescription": "create form page in react and use tailwind",
+        "taskWorker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ],
+        "status": "completed",
+        "deadLines": "12/08/24"
+    },
+    {
+        "id": 21,
+        "projectID": 4,
+        "taskTitle": "Create Footer",
+        "taskDescription": "create footer in react and use tailwind",
+        "taskWorker": [
+            "/images/user1.png",
+            "/images/user2.png"
+        ],
+        "status": "in progress",
+        "deadLines": "12/08/24"
+    },
+    {
+        "id": 84,
+        "projectID": 1,
+        "taskTitle": "Create Form Page",
+        "taskDescription": "create form page in react and use tailwind",
+        "taskWorker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png",
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ],
+        "status": "to do",
+        "deadLines": "12/08/24"
+    },
+    {
+        "id": 135,
+        "projectID": 5,
+        "taskTitle": "Create Footer",
+        "taskDescription": "create footer in react and use tailwind",
+        "taskWorker": [
+            "/images/user1.png",
+            "/images/user2.png"
+        ],
+        "status": "to do",
+        "deadLines": "12/08/24"
+    },
+    {
+        "id": 136,
+        "projectID": 2,
+        "taskTitle": "Create Navbar",
+        "taskDescription": "create navbar in react and use tailwind",
+        "taskWorker": [
+            "/images/user1.png",
+            "/images/user3.png",
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ],
+        "status": "to do",
+        "deadLines": "12/08/24"
+    },
+    {
+        "id": 31,
+        "projectID": 1,
+        "taskTitle": "Create Home Page",
+        "taskDescription": "create home page in react and use tailwind",
+        "taskWorker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png",
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ],
+        "status": "in progress",
+        "deadLines": "12/08/24"
+    },
+    {
+        "id": 99,
+        "projectID": 4,
+        "taskTitle": "Create Form Page",
+        "taskDescription": "create form page in react and use tailwind",
+        "taskWorker": [
+            "/images/user1.png",
+            "/images/user2.png",
+            "/images/user3.png",
+            "/images/user2.png",
+            "/images/user3.png"
+        ],
+        "status": "completed",
         "deadLines": "12/08/24"
     }
 ]

@@ -4,11 +4,10 @@ import {
   FieldTimeOutlined,
   EyeOutlined,
   EditOutlined,
-  DeleteOutlined
+  DeleteOutlined,
 } from "@ant-design/icons";
 import Image from "next/image";
 import { Tooltip, Button, Form, Modal, Input, DatePicker, Select } from "antd";
-
 
 const Task = ({ projectID, status, searchQuery }) => {
   const { Option } = Select;
@@ -84,7 +83,7 @@ const Task = ({ projectID, status, searchQuery }) => {
           <button onClick={() => setIsModalOpen(!isModalOpen)} className="btn">
             <EditOutlined className="text-green-500 text-lg" />
           </button>
-          <button onClick={() => setIsModalOpen(!isModalOpen)} className="btn">
+          <button className="btn">
             <DeleteOutlined className="text-green-500 text-lg" />
           </button>
 
@@ -149,6 +148,19 @@ const Task = ({ projectID, status, searchQuery }) => {
             </Form>
           </Modal>
         </div>
+      </div>
+      <div
+        className={`mt-4 ${
+          task.priority === "Low"
+            ? "bg-green-600"
+            : task.priority === "Medium"
+            ? "bg-red-400"
+            : task.priority === "High"
+            ? "bg-red-600"
+            : ""
+        } w-fit px-5 rounded-3xl text-white text-sm`}
+      >
+        {task.priority}
       </div>
     </div>
   ));

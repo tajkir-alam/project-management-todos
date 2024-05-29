@@ -14,6 +14,7 @@ const TaskColumn = ({ projectID, status, searchQuery }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const draggedTask = taskStore((store) => store.draggedTask);
   const moveTask = taskStore((store) => store.moveTask);
+  let priority;
 
   const handleCancel = () => {
     setIsModalOpen(false);
@@ -33,6 +34,7 @@ const TaskColumn = ({ projectID, status, searchQuery }) => {
       deadLines: formattedDeadline,
       taskWorker: imagePaths,
       status,
+      priority,
     };
     taskStore.getState().addTask(formData);
     console.log(formData);
@@ -110,6 +112,22 @@ const TaskColumn = ({ projectID, status, searchQuery }) => {
                 <Option value="user1">User 1</Option>
                 <Option value="user2">User 2</Option>
                 <Option value="user3">User 3</Option>
+              </Select>
+            </Form.Item>
+            <Form.Item
+              name="taskPriority"
+              label="Task Priority"
+              rules={[
+                { required: true, message: "Please select task priority" },
+              ]}
+            >
+              <Select
+                placeholder="Select task workers"
+                onChange={(e) => (priority = e)}
+              >
+                <Option value="Low">Low</Option>
+                <Option value="Medium">Medium</Option>
+                <Option value="High">High</Option>
               </Select>
             </Form.Item>
             <Form.Item

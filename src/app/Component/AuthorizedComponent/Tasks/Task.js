@@ -4,9 +4,11 @@ import {
   FieldTimeOutlined,
   EyeOutlined,
   EditOutlined,
+  DeleteOutlined
 } from "@ant-design/icons";
 import Image from "next/image";
 import { Tooltip, Button, Form, Modal, Input, DatePicker, Select } from "antd";
+
 
 const Task = ({ projectID, status, searchQuery }) => {
   const { Option } = Select;
@@ -82,6 +84,11 @@ const Task = ({ projectID, status, searchQuery }) => {
           <button onClick={() => setIsModalOpen(!isModalOpen)} className="btn">
             <EditOutlined className="text-green-500 text-lg" />
           </button>
+          <button onClick={() => setIsModalOpen(!isModalOpen)} className="btn">
+            <DeleteOutlined className="text-green-500 text-lg" />
+          </button>
+
+          {/* Update Task Modal */}
           <Modal
             title="Add Task"
             open={isModalOpen}

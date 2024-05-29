@@ -32,7 +32,7 @@ const TaskColumn = ({ projectID, status, searchQuery }) => {
       projectID: parseInt(projectID),
       deadLines: formattedDeadline,
       taskWorker: imagePaths,
-      status
+      status,
     };
     taskStore.getState().addTask(formData);
     console.log(formData);
@@ -64,6 +64,8 @@ const TaskColumn = ({ projectID, status, searchQuery }) => {
           className="btn bg-transparent border border-dashed border-[#067C89] text-2xl !hover:bg-transparent !focus:bg-transparent"
           onClick={() => setIsModalOpen(!isModalOpen)}
         />
+
+        {/* Task Adding Modal */}
         <Modal
           title="Add Task"
           open={isModalOpen}

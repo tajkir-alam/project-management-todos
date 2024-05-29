@@ -44,7 +44,7 @@ const ProjectCard = ({ card }) => {
           href={`/dashboard/project/${id}`}
           className="text-slate-500 cursor-pointer"
         >
-          {" "}
+          <br />
           see more...
         </Link>
       </p>
